@@ -35,13 +35,11 @@ export const Card = () => {
         : false;
 
     if (!conditionSelected) {
-      console.log("neither conditions nor range selected");
       showMessage("err", "select atleast 1 condition");
       return;
     }
 
     if (rangeValue === 0) {
-      console.log("neither conditions nor range selected");
       showMessage("err", "select password Length");
       return;
     }
@@ -73,7 +71,7 @@ export const Card = () => {
       );
       i++;
     }
-    console.log(password);
+
     setGeneratedPassword(password);
     return password;
   }
@@ -100,7 +98,6 @@ export const Card = () => {
   async function copyPassword() {
     if (generatedPassword) {
       await navigator.clipboard.writeText(generatedPassword);
-      console.log("copied!");
       showMessage("success", "copied");
     }
   }
