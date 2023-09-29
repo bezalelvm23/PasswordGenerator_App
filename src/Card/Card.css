@@ -39,14 +39,16 @@
 }
 
 .password-container button {
-  background: transparent;
+  background: none;
   border: 0;
   cursor: pointer;
   padding: 4px;
 }
 
-.password-container button img {
-  stroke: var(--green-color);
+.copy-icon {
+  width: 20px;
+  height: 20px;
+  color: #54d165;
 }
 
 .bottom-container {
@@ -193,4 +195,13 @@ input[type="checkbox"]:checked {
   color: var(--green-color);
   color: red;
   text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .card-container {
+    width: 90%;
+  }
+  .password {
+    font-size: 16px;
+  }
 }

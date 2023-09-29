@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useState } from "react";
 import "./Card.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
 export const Card = () => {
   const [conditions, setConditions] = useState([
@@ -133,7 +135,7 @@ export const Card = () => {
       <div className="password-container">
         <p className="password">{generatedPassword}</p>
         <button onClick={copyPassword}>
-          <img src="icons8-copy-48.png" alt="copy" height={28} width={28} />
+          <FontAwesomeIcon icon={faCopy} className="copy-icon" />
         </button>
       </div>
       <div className="bottom-container">
